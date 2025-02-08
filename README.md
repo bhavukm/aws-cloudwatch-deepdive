@@ -43,5 +43,7 @@ sudo yum install stress-ng -y
 stress-ng --vm-bytes $(awk '/MemFree/{printf "%d\n", $2 * 0.9;}' < /proc/meminfo)k --vm-keep -m 1
 
 To increase CPU usage on your EC2 Instance, use the following commands:
+
 sudo yum install stress -y
+
 stress --cpu 1 --timeout 800 &
