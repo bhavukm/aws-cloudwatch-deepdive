@@ -29,7 +29,7 @@
                 "ssm:GetParameter",
                 "ssm:PutParameter"
             ],
-            "Resource": "arn:aws:ssm:*:*:parameter/AmazonCloudWatch-*"
+            "Resource": "arn:aws:ssm:*:*:parameter/AmazonCloudWatch-demo"
         }
     ]
 }
