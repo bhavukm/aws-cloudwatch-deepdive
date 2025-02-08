@@ -1,7 +1,8 @@
 # aws-cloudwatch-deepdive
 All about CloudWatch Concepts
 
-![image](https://github.com/user-attachments/assets/d09c8051-e1ed-4323-8193-328731847a21)
+![image](https://github.com/user-attachments/assets/b2e417bf-ccfe-46d8-ba47-635ceea3b2bf)
+
 
 ![image](https://github.com/user-attachments/assets/cd18f2fa-dde7-454a-a56c-0339ef499fb7)
 
