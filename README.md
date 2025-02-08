@@ -9,9 +9,10 @@ All about CloudWatch Concepts
 
 Steps to Install and Configure CloudWatch and amazon-ssm agents:
 
-1. Launch an AWS EC2 Instance with Amazon Linux AMI and SSH to it.
-   
-2. Download, Install, and Configure the agents:
+1. Launch an AWS EC2 Instance with Amazon Linux AMI.
+2. Create an IAM Role with 2 policies (aws-iam-ssm-policy and aws-iam-cloudwatch-policy present in this repo). Attach the IAM Role to the EC2 Instance.
+3. SSH to the EC2 Instance.
+4. Download, Install, and Configure the agents:
    
 wget https://s3.us-east-1.amazonaws.com/amazoncloudwatch-agent-us-east-1/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm
 
