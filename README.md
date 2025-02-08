@@ -17,25 +17,21 @@ Steps to Install and Configure CloudWatch and amazon-ssm agents:
    
 wget https://s3.us-east-1.amazonaws.com/amazoncloudwatch-agent-us-east-1/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm
 
+sudo yum install -y https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm
+
+sudo systemctl start amazon-ssm-agent
+
+sudo systemctl status amazon-ssm-agent
+
 sudo rpm -U ./amazon-cloudwatch-agent.rpm
 
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
-
-systemctl status amazon-cloudwatch-agent.service
-
-systemctl start amazon-cloudwatch-agent.service
 
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status
 
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a start
 
 ps -ef |grep -i cloudwatch
-
-sudo yum install -y https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm
-
-sudo systemctl start amazon-ssm-agent
-
-sudo systemctl status amazon-ssm-agent
 
 Additionally, if you want to setup a CloudWatch Alarm for EC2 Memory Usage Threshold breach (Example: >=20%), use the following commands to increase memory usage on your EC2 Instance:
 
